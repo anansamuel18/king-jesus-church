@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/king.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="jquery.flipster.min.css">
+  <title>King Jesus Church</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+  .navbar {
+    width: 100%;
+    background: #C04848;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    overflow: auto;
+  }
+
+  .navbar a {
+    float: left;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 15%;
+    /* Four links of equal widths */
+    text-align: center;
+  }
+
+  .navbar .mail:hover {
+    color: #c01b1b;
+  }
+
+  .navbar .call:hover {
+    color: #c01b1b;
+  }
+
+  .navbar .active:hover {
+    background-color: #4CAF50;
+  }
+
+  .navbar .on:hover {
+    background-color: #3b5998;
+  }
+
+  .navbar .off:hover {
+    background-color: #FF0000;
+  }
+
+
+
+
+  @media screen and (max-width: 900px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+
+
+  .topnav a {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .mrn {
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+
+  .topnav a:hover {
+    color: #c01b1b;
+    transition: 0.6s ease-in-out;
+  }
+
+  .topnav a .active:hover {
+    background-color: none;
+  }
+
+  .topnav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .topnav.responsive {
+      position: relative;
+    }
+
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  .banner-area {
+    /* background: url(https://images.unsplash.com/photo-1458593140930-1f9049c952c1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGNyb3duJTIwamVzdXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60); */
+    background: url(images/59369601_10214250878807731_5824272946717261824_n.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 65vh;
+  }
+
+  .content-area {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column-top {
+    border: 2px solid #ddd;
+    width: 40%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: black;
+  }
+
+  .column-down {
+    border: 2px solid #ddd;
+    width: 85%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: black;
+    font-weight: bolder;
+  }
+
+  .column-top:hover {
+    background-color: black;
+    color: #ddd;
+    transition: 0.6s ease-in-out;
+  }
+
+  .column-down:hover {
+    background-color: black;
+    color: #ddd;
+    transition: 0.6s ease-in-out;
+  }
+
+
+
+  .btn {
+    font-size: 25px;
+    font-weight: bold;
+    background-image: #C04848;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
+    color: #ddd;
+    padding: 10px;
+    width: 19%;
+    border-radius: 40px;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .btn:hover {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+    transition: 0.6s ease-in-out;
+  }
+
+  .container {
+    /* background-color: brown; */
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+  }
+
+  .container-content {
+    width: 100%;
+  }
+
+  .content-top {
+    text-align: center;
+    width: 100%;
+  }
+
+  .column-1 {
+    color: black;
+    margin-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color:#fff;
+
+    overflow:hidden;
+}
+
+.hero .carousel {
+    width: 300px;
+    margin: 100px auto 0;
+    overflow: visible;
+}
+
+
+  .give {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .more {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .money {
+    width: 100%;
+    height: 100%;
+    background-color: #3486A4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+  }
+
+  .money i {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    line-height: 100px;
+    font-size: 60px;
+  }
+
+  .box {
+    width: 100%;
+    background-image: #C04848;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .box .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #c01b1b; */
+    width: 50%;
+    margin-left: 30px;
+  }
+
+  .left a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .left a:hover {
+    color: #c01b1b;
+  }
+
+  .box .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: aqua; */
+    width: 100%;
+  }
+
+  .right a {
+    text-decoration: none;
+    color: white;
+  }
+
+  @media screen and (max-width: 750px) {
+    .box {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+      height: 35vh;
+      margin-top: 40px;
+    }
+  }
+
+  footer {
+    width: 96%;
+    background-color: white;
+    height: 10vh;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
+
+<body>
+
+  <div class="navbar">
+    <a class="mail" href="#email"><i class="fa fa-fw fa-envelope-square"></i>kingjesus@gmail.com</a>
+    <a class="call" href="#call"><i class="fa fa-fw fa-phone"></i>Call Us: 03334633471</a>
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="https://www.facebook.com/bishopnasir.samuel" target="_blank" class="on"><i
+        class="fa fa-fw fa-facebook"></i> Facebook</a>
+    <a href="https://www.youtube.com/channel/UCd37SraR5GtLQbUMS2qSJdw" target="_blank" class="off"><i
+        class="fa fa-fw fa-youtube"></i> Youtube</a>
+  </div>
+
+  <div class="banner-area">
+    <div class="topnav back" id="myTopnav">
+      <a href="index.html" style="background-color:transparent;"> <img src="images/new logo KJC.png" alt="logo" width="100"></a>
+      <a href="activities.html" class="mrn">Activities</a>
+      <a href="contact.html" class="mrn">Contact</a>
+      <a href="about.html" class="mrn">About</a>
+      <a href="prayer.html" class="mrn">Prayer</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    <div class="content-area">
+      <div class="content">
+        <div class="column-down">
+          <p style="font-size: 28px;">Revelation 19:16</p>
+          <p>On His robe and on His thigh He has this name written: King of kings and Lord of lords.</p>
+        </div>
+        <div class="btn"><a>Donate</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- content -->
+  <div class="container">
+    <div class="conatiner-content">
+      <div class="content-top">
+        <h1 class="column-1">KING JESUS CHURCH</h1>
+        <p style="display: flex; margin: 50px; font-size: large;">God has marked us with a vision for Pakistan
+          and the nations, and our passion is to walk according to His heart’s purpose. Every member of this
+          family becomes an active part of the body of Christ; always moving, growing and multiplying. We are
+          hungry for more of His Spirit, because we are witnesses of His power and love. We invite you to know
+          more about our vision and how to contribute to its advancement.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="carousel">
+        <ul>
+            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/EGz7Kyo5yr0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/WJI7j6xipBQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+            <li><iframe width="560" height="315" src="https://www.youtube.com/embed/vLTSEPrZ9cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        </ul>
+    </div>
+</div>
+
+
+
+  <div class="give">
+    <div class="more">
+      <div class="money">
+        <i style="color: red; background-color: white; ;" class="fa fa-fw fa-heart"></i>
+        <h3>GIVE LOVE,<p style="font-size: medium;">---Donations</p>
+        </h3>
+        <h6>JS BANK LTD King Jesus Church Ministries <p>Account:----------------Swift Code:----- </p>
+        </h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="left">
+      <a href="index.html" class="">Home</a>
+    </div>
+    <div class="left">
+      <a href="activities.html" class="">Activities</a>
+    </div>
+    <div class="left">
+      <a href="about.html" class="">About</a>
+    </div>
+    <div class="left">
+      <a href="prayer.html" class="">Prayer</a>
+    </div>
+
+    <div class="right">
+      <h2 style="color:white;">CONTACT US</h2>
+      <a href=""><i class="fa fa-fw fa-home"></i>67 Modern colony </a>
+      <a class="mail" href="#email"><i class="fa fa-fw fa-envelope-square"></i>kingjesus@gmail.com</a>
+      <a class="call" href="#call"><i class="fa fa-fw fa-phone"></i>Call Us: 03334633471</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="row">
+      <div class="column">
+        <img style="margin-top: 10px;" src="images/new logo KJC.png" alt="" width="70">
+      </div>
+      <div  class="column">
+        <p style="margin-top: 35px;">REGISTERED &reg; KING JESUS CHURCH MINISTRIES</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="jquery.flipster.min.js"></script>
+
+  <script>
+   $('.carousel').flipster({
+       style: 'carousel',
+       spacing: -0.3,
+   });
+</script>
+</body>
+
+</html>

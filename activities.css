@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap');  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  
+.navbar {
+  width: 100%;
+  background-color: black;
+  overflow: auto;
+}
+
+.navbar a {
+float: left;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 15%; /* Four links of equal widths */
+  text-align: center;
+}
+
+.navbar .mail:hover{
+color: #c01b1b;
+}
+.navbar .call:hover {
+  color: #c01b1b;
+}
+.navbar .active:hover {
+  background-color: #4CAF50;
+}
+.navbar .on:hover {
+  background-color:#3b5998;
+}
+.navbar .off:hover {
+  background-color:	#FF0000;
+}
+
+
+
+
+@media screen and (max-width: 900px) {
+  .navbar a {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+  
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  
+  
+  .topnav a {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+.mrn {
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+  .topnav a:hover {
+    color:#c01b1b;
+    transition: 0.6s ease-in-out;
+  }
+  
+.topnav a .active:hover {
+    background-color: none;
+}
+
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+.banner-area {
+  /* background:url(https://images.unsplash.com/photo-1458593140930-1f9049c952c1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fGNyb3duJTIwamVzdXN8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);  */
+  background: url(group.jpeg);
+  background-size:cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+ .container {
+/* background-color: brown; */
+height: 450px;
+display: flex;
+flex-direction: column;
+justify-self: center;
+align-items: center;
+ }
+
+ .container-content {
+    width: 100%;
+ }
+
+ .content-top {
+ text-align: center;
+width: 100%;
+ }
+
+ .column-1 {
+    color:black;
+    margin-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+ }
+
+
+   .box {
+     padding: 0% !important;
+     box-sizing: border-box;
+    width: 100%;
+    background-image: #C04848;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .box .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #c01b1b; */
+    width: 50%;
+    margin-left: 30px;
+  }
+
+  .left a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .left a:hover {
+    color: #c01b1b;
+  }
+
+  .box .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: aqua; */
+    width: 100%;
+  }
+
+  .right a {
+    text-decoration: none;
+    color: white;
+  }
+
+  @media screen and (max-width: 750px) {
+    .box  {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+      height: 32vh;
+      margin-top: 40px;
+  }
+}
+
+footer {
+  width: 96%;
+  background-color: white;
+  height: 10vh;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/about.css">
+  <title>About</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+  .navbar {
+    width: 100%;
+    background-image: #C04848;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow: auto;
+  }
+
+  .navbar a {
+    float: left;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 20%;
+    /* Four links of equal widths */
+    text-align: center;
+  }
+
+  .navbar .mail:hover {
+    color: #c01b1b;
+  }
+
+  .navbar .call:hover {
+    color: #c01b1b;
+  }
+
+  .navbar .active:hover {
+    background-color: #4CAF50;
+  }
+
+  .navbar .on:hover {
+    background-color: #3b5998;
+  }
+
+  .navbar .off:hover {
+    background-color: #FF0000;
+  }
+
+
+
+
+  @media screen and (max-width: 900px) {
+    .navbar a {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+
+
+  .topnav a {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .mrn {
+    margin-top: 50px;
+    margin-left: 100px;
+  }
+
+  .topnav a:hover {
+    color: #c01b1b;
+    transition: 0.6s ease-in-out;
+  }
+
+  .topnav a .active:hover {
+    background-color: none;
+  }
+
+  .topnav .icon {
+    display: none;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .topnav a:not(:first-child) {
+      display: none;
+    }
+
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    .topnav.responsive {
+      position: relative;
+    }
+
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+      margin: 0;
+    }
+  }
+
+  .banner-area {
+    background: url(images/DSC_6116.JPG);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 60vh;
+  }
+
+  .container {
+    /* background-color: rgb(218, 212, 202); */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+  }
+
+  .content-bottom {
+    margin-top: 20px;
+  }
+
+  .content-bottom:hover {
+    color: #c01b1b;
+    transition: 0.6s ease-in-out;
+  }
+
+  .hov {
+    color: black;
+  }
+
+  .hov:hover {
+    color: #c01b1b;
+  }
+
+
+  .big-column {
+    margin-top: 50px;
+  }
+
+  .big-column .row .column img {
+    max-width: 100%;
+    transition: transform 1s;
+  }
+
+  .big-column .row .column:hover img {
+    transform: scale(1.2);
+  }
+
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    /* Should be removed. Only for demonstration */
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+
+  .first-parent {
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .parent {
+    width: 100%;
+    height: 100%;
+  }
+
+  .child {
+    width: 100%;
+    height: 100%;
+    background-color: #734b6d;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .child p {
+    color: white;
+    padding: 64px;
+  }
+
+  @media screen and (max-width:1000px) {
+    .parent {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .give {
+    padding-bottom: 50px;
+  }
+
+  .more {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .money {
+    width: 100%;
+    height: 100%;
+    background-color: #3486A4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arimo', sans-serif;
+  }
+
+  .money i {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    line-height: 100px;
+    font-size: 60px;
+  }
+
+  .box {
+    width: 100%;
+    background-image: #C04848;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #480048, #C04848);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #480048, #C04848);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ;
+    height: 20vh;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .box .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: #c01b1b; */
+    width: 50%;
+    margin-left: 30px;
+  }
+
+  .left a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .left a:hover {
+    color: #c01b1b;
+  }
+
+  .box .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* background-color: aqua; */
+    width: 100%;
+  }
+
+  .right a {
+    text-decoration: none;
+    color: white;
+  }
+
+  @media screen and (max-width: 750px) {
+    .box {
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: left;
+      height: 35vh;
+    }
+  }
+
+
+  footer {
+    background-color: white;
+    height: 10vh;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Create three equal columns that floats next to each other */
+  .column-1 {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+
+  /* Clear floats after the columns */
+  .row-1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+</style>
+
+<body>
+
+  <div class="navbar">
+    <a class="mail" href="#email"><i class="fa fa-fw fa-envelope-square"></i>kingjesus@gmail.com</a>
+    <a class="call" href="#call"><i class="fa fa-fw fa-phone"></i>Call Us: 03334633471</a>
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="https://www.facebook.com/bishopnasir.samuel" target="_blank" class="on"><i
+        class="fa fa-fw fa-facebook"></i> Facebook</a>
+    <a href="https://www.youtube.com/channel/UCd37SraR5GtLQbUMS2qSJdw" target="_blank" class="off"><i
+        class="fa fa-fw fa-youtube"></i> Youtube</a>
+  </div>
+
+  <div class="banner-area">
+    <div class="topnav back" id="myTopnav">
+      <a href="index.html" style="background-color:transparent;"> <img src="images/new logo KJC.png" alt="logo" width="100"></a>
+      <a href="activities.html" class="mrn">Activities</a>
+      <a href="contact.html" class="mrn">Contact</a>
+      <a href="about.html" class="mrn">About</a>
+      <a href="prayer.html" class="mrn">Prayer</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="container-content">
+      <div class="content-top">
+        <img src="images/100761929_4015415291832089_8045520789715288064_n.jpg" alt="bishopnasir" width="100%">
+        <h3 style="margin-top: 40px;">CHAIRMAN AND FOUNDER BISHOP DR NASIR SAMUEL.</h3>
+      </div>
+      <div class="content-bottom">
+        <p>King Jesus Church Ministries</p>
+        <hr>
+      </div>
+      <div class="hov">
+        <date><i class="fa fa-fw fa-table"></i> March 2021</date>
+      </div>
+    </div>
+    <p style="margin-top: 50px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ducimus illo impedit
+      mollitia, qui temporibus facilis libero ullam, ex maxime odit. Modi excepturi tempora assumenda nobis, repudiandae
+      ratione voluptatum magni?
+      Amet fugiat temporibus quam voluptatem maxime quidem ipsam sequi impedit. Hic qui inventore, deleniti nemo quis
+      quisquam ut laboriosam reiciendis iste, ipsam aliquam alias, quae aperiam cum excepturi eaque error?
+      Sint et voluptas eveniet voluptatem obcaecati dolorem modi autem, cumque consequuntur laboriosam iure pariatur
+      corporis sit temporibus quaerat laborum amet at nobis aperiam placeat excepturi, praesentium quos. Alias, eaque
+      ea?
+      Expedita deserunt nesciunt cumque architecto possimus provident amet alias deleniti atque dignissimos quae,
+      assumenda, porro ab ducimus voluptate doloribus laudantium suscipit doloremque rem repellendus cupiditate dolorum
+      quam. Iusto, deleniti autem?
+      Ea aperiam reiciendis molestiae esse! Totam mollitia omnis amet qui nihil laudantium! Accusamus, accusantium
+      fugit! Fugit voluptatibus excepturi, debitis optio odio consequatur dolore, assumenda provident dicta asperiores
+      quam amet vero.
+      Architecto quidem minima aut voluptatibus eveniet sequi animi ipsa quibusdam expedita maxime aperiam harum
+      corporis magnam, quisquam tenetur rerum reiciendis molestias nihil? Eum quos, in fugiat rerum qui enim
+      repudiandae.
+      Adipisci nesciunt itaque expedita dicta dignissimos sunt optio facere culpa perspiciatis atque dolorum, veritatis
+      eveniet praesentium minima nihil, ad ipsum quas nulla eligendi voluptate excepturi aperiam fugit! Libero, dolor
+      facere!
+      Consequuntur omnis deleniti necessitatibus nobis totam aut ipsum repellat iste ad, ratione eveniet quas debitis
+      molestias vel, quis itaque dicta accusamus quod, cumque quisquam. Id neque consequuntur temporibus dignissimos
+      ipsum.
+      Fugiat dolorem, inventore voluptatem alias deleniti ipsa eos odit dolores dolorum non repellat totam obcaecati
+      ullam mollitia hic, a quo voluptatibus similique, nihil voluptatum eveniet nemo libero fugit nostrum. Distinctio!
+      Fugit, hic! Magnam suscipit dolorum dolor quis exercitationem id similique maiores iure quisquam eligendi. Dolores
+      adipisci libero impedit numquam nemo magnam incidunt quidem ea, cum consequuntur ratione consequatur excepturi
+      consectetur.
+      Magni ipsam iste nihil quis. Laborum quidem, qui commodi ab unde vel mollitia reprehenderit alias debitis
+      perspiciatis doloribus ipsum quia in esse nemo aspernatur odio aliquid sunt. Praesentium, qui perferendis!
+      Maiores eligendi, deserunt similique quis in inventore quaerat culpa. A incidunt dolor sint illo voluptatibus
+      tempora, quo aliquid soluta quasi asperiores tenetur modi adipisci molestias. Officiis mollitia debitis incidunt
+      sapiente?
+      Quaerat, cumque. Ut, facilis odit tenetur ipsa sint distinctio illum perferendis repudiandae maiores aut!
+      Praesentium aliquid repudiandae porro placeat! Aperiam aliquid reprehenderit molestiae vitae pariatur incidunt
+      ipsa officiis consequuntur corporis!
+      Omnis earum repudiandae obcaecati impedit magnam at voluptatem quaerat, iste facere adipisci aliquam reiciendis.
+      Non voluptatibus harum voluptates, asperiores maiores assumenda cum consectetur, magni fugit similique possimus
+      voluptate quis officia.
+      Nostrum tenetur, harum quis saepe totam ut, qui ipsam corrupti explicabo sapiente excepturi ab vel at consectetur
+      enim temporibus ipsa. Esse illum deleniti nobis, a alias similique id eum minima.
+      Labore et quibusdam assumenda nulla perspiciatis recusandae vero, quo veniam, quasi, iste ex corporis placeat
+      molestiae quos. Obcaecati similique vel autem. Sit enim at, soluta quae nulla atque rerum reiciendis!
+      Eligendi deserunt incidunt porro quod animi dicta sint fuga ipsum. Pariatur commodi corporis sint quo libero odit
+      esse voluptatem dolore, quis beatae, consequuntur, velit dicta eligendi odio quas! Dolorem, dolore!
+      Facilis quod unde qui placeat est doloremque vel aperiam quo reiciendis doloribus reprehenderit, pariatur vero
+      aliquam nesciunt culpa quos sint itaque sed maiores? Explicabo quisquam quibusdam aut voluptatem, deleniti
+      voluptas?
+      Animi non, facilis tempora, voluptates sapiente, eaque delectus quibusdam esse recusandae quod voluptatibus saepe
+      maxime nulla eveniet laudantium eum commodi expedita! Exercitationem minus libero earum culpa dolor adipisci!
+      Corrupti, reiciendis.
+      Facilis aperiam pariatur quam ipsa ea laudantium distinctio enim quos voluptatem, doloremque delectus voluptas
+      labore iste a laborum ullam! Quas fugit aspernatur aliquam quia numquam accusantium ab eveniet pariatur eius.</p>
+
+    <div class="big-column">
+      <div class="row">
+        <div class="column">
+          <img src="images/DSC_5817.JPG" alt="church" width="100%">
+        </div>
+        <div class="column">
+          <img src="images/DSC_5626.JPG" alt="church" width="100%">
+        </div>
+        <div class="column">
+          <img src="images/DSC_5777.JPG" alt="church" width="100%">
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="images/DSC_5798.JPG" alt="church" width="100%">
+        </div>
+        <div class="column">
+          <img src="images/DSC_6138.JPG" alt="church" width="100%">
+        </div>
+        <div class="column">
+          <img src="images/DSC_5891.JPG" alt="church" width="100%">
+        </div>
+
+        <div class="first-parent">
+          <div class="parent">
+            <div class="child">
+              <p>God directly spoke to Bishop Nasir Samuel to start King Jesus Church Ministries in 1995 and this
+                Ministry was born.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="give">
+    <div class="more">
+      <div class="money">
+        <i style="color: red; background-color: white; ;" class="fa fa-fw fa-heart"></i>
+        <h3>GIVE LOVE,<p style="font-size: medium;">---Donations</p>
+        </h3>
+        <h6>JS BANK LTD King Jesus Church Ministries <p>Account:----------------Swift Code:----- </p>
+        </h6>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="box">
+    <div class="left">
+      <a href="index.html" class="">Home</a>
+    </div>
+    <div class="left">
+      <a href="activities.html" class="">Activities</a>
+    </div>
+    <div class="left">
+      <a href="about.html" class="">About</a>
+    </div>
+    <div class="left">
+      <a href="prayer.html" class="">Prayer</a>
+    </div>
+
+    <div class="right">
+      <h2 style="color:white;">CONTACT US</h2>
+      <a href=""><i class="fa fa-fw fa-home"></i>67 Modern colony </a>
+      <a class="mail" href="#email"><i class="fa fa-fw fa-envelope-square"></i>kingjesus@gmail.com</a>
+      <a class="call" href="#call"><i class="fa fa-fw fa-phone"></i>Call Us: 03334633471</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="row-1">
+      <div class="column-1">
+        <img style="margin-top: 10px;" src="new logo KJC.png" alt="" width="70">
+      </div>
+      <div class="column-1">
+        <p style="margin-top: 35px;">REGISTERED &reg; KING JESUS CHURCH MINISTRIES</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+</body>
+
+</html>
